@@ -16,15 +16,13 @@ barba.init({
   transitions: [
     {
       name: 'home',
-      beforeOnce(data) {
-
+      to: {
+        namespace: ['home']
       },
-      once() {
-
-      },
-      afterOnce(data) {
-
-      }
+      sync: true,
+      once() {},
+      leave() {},
+      enter() {},
     },
     {
       name: 'fade',
@@ -56,6 +54,6 @@ barba.init({
       beforeEnter() {
 
       }
-    },
+    }
   ],
 });
