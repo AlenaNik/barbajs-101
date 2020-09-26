@@ -12,7 +12,6 @@ barba.hooks.before((data) => {
 
 })
 
-
 barba.init({
   transitions: [
     {
@@ -34,6 +33,18 @@ barba.init({
       },
       leave() {},
       enter() {}
+    },
+    {
+      name: 'clip',
+      sync: true,
+      to: {
+        namespace: ['clip']
+      },
+      leave() {},
+      enter() {},
+      beforeEnter() {
+
+      }
     },
   ],
 });
